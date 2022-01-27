@@ -1,0 +1,16 @@
+
+.icon {display:inline-block; margin:10px;padding:10px;}
+/*
+.icon {display:inline-block; margin:10px;padding:10px;}
+.i800 {margin:10px;padding:10px;width:33%;display:inline-block;}
+.i800  img {width:100%;min-width:400px;}
+.more {margin:10px;padding:10px;vertical-align:top;display:inline-block;}
+*/
+.i800 {margin:10px;padding:10px;width:33%;display:inline-block;float: left;}
+.i800  img {width:100%;min-width:400px;}
+.more {margin:10px;padding:10px;vertical-align:top;display:inline-block;}
+
+.nbutton {display:inline-table; margin:5px;padding:5px;border:solid black thin;}
+.sbutton {background:gray;}
+.ubutton {background:white;}
+.ubutton:hover {background:yellow;cursor: pointer;}
