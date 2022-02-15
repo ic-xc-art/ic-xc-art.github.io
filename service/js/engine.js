@@ -10,6 +10,7 @@ document.getElementById("t").style.display = "block";document.getElementById("g"
 let n = 0;
 Que=new Array(10);
 Answ=new Array(10);
+Aut=new Array(10);
 
 while (n < 10) {
 var q1=getRandomInt(A.length);
@@ -17,6 +18,7 @@ if (Que.indexOf(Ac[q1])<0) {
 Que[n]=Ac[q1];
 Answ[n]=new Array(4);
 Answ[n][0]=A[q1];
+Aut[n]=Aa[q1];
 
 let m = 1;
 while (m < 4) {
@@ -70,7 +72,7 @@ if (inp[j].value==0) {document.getElementById('a-'+i+'-'+j).style.color = "green
 inp[j].disabled = true;
 }
 var link=document.getElementById('link'+i);
- link.setAttribute('href', Que[i]+'.html');
+ link.setAttribute('href', Aut[i]+'.html#'+Que[i]);
 }
 
 alert (10*right+'%');

@@ -24,23 +24,483 @@ test ();
 }
 </script><div id="g"><div class="more">
 <script>
-var A = ["Сотворение Евы из Адама","Святой Себастьян","Мадонна с младенцем и святыми","Мадонна Солли","Распятие (Алтарь Читта-ди-Кастелло)","Коронование Богородицы (Алтарь Одди)","Благовещение","Поклонение волхвов","Введение в храм","Мадонна Диоталеви","Мадонна с младенцем","Мадонна с младенцем на троне со святыми","Спосализио (Помолвка Девы Марии)","Мадонна Грандука","Мадонна с книгой (Мадонна Конестабиле)","Малая Мадонна Каупера","Святой Георгий и дракон","Святой Михаил и дракон","Святой Георгий, сражающийся с драконом","Мадонна Террануова","Благословение Христа (Pax Vobiscum)","Мадонна Бельведерская (Мадонна дель Прато)","Мадонна со щеглом","Богородица с младенцем и святым Иоанном Крестителем (La Belle Jardinière)","Мадонна Бриджуотера","Мадонна Каниджани","Мадонна дель Бальдаккино","Святое семейство с ягненком","Большая Мадонна Каупера","Мадонна с младенцем (Мадонна Темпи)","Мадонна с младенцем и младенцем Святым Иоанном","Святая Екатерина Александрийская","Мадонна с младенцем (Алтарь Ансидеи)","Мадонна с безбородым святым Иосифом","Погребение","Богословские добродетели","Папа Григорий IX утверждает декреталии","Кардинальные добродетели","Суд Соломона","Адам и Ева","Диспут о Святом Таинстве (La Disputa)","Изгнание Гелиодора из храма","Месса в Больсене","Освобождение Святого Петра","Встреча Льва Великого и Аттилы","Пожар в Борго","Битва при Остии","Коронация Карла Великого","Клятва Льва III","Крещение Константина","Папа Урбан I между Юстицией и Милосердием","Видение Креста","Дар Рима","Мадонна Колонна","Мадонна Лорето (Мадонна дель Вело)","Мадонна Альдобрандини (Мадонна Гарва)","Мадонна с голубой диадемой","Портрет кардинала","Мадонна Альба","Мадонна Фолиньо","Пророк Исаия","Портрет Юлия II","Мадонна с рыбой","Сикстинская Мадонна","Мадонна дель Импанната","Сивиллы и пророки","Святая Сесилия","Мадонна в кресле","Мадонна делла Тенда","Портрет Томмазо Ингирами","Портрет кардинала Биббиены","Христос падает на пути к Голгофе","Разделение земли и воды","Сотворение животных","Моисей спасен из воды","Встреча Иакова с Рахилью","Суд Соломона","Авимелех шпионил за Исааком и Ревеккой","Сон Якова","Святое семейство","Святое семейство под дубом","Святое семейство, или Жемчужина","Святой Михаил и дьявол","Святой Иоанн Креститель в пустыне","Видение Иезекииля","Папа Лев X с кардиналами Джулио Медичи и Луиджи де Росси","Преображение","Чудесный улов рыбы","Чудесный улов рыбы","Святой Павел проповедует в Афинах","Передача ключей","Смерть Анании","Смерть Анании","Исцеление хромого человека","Святой Павел перед проконсулом","Воскресение Христа","Мадонна с ягненком","Ангел","Ангел со свитком","Бог Отец и Дева Мария","Святой Франциск Ассизский","Святой Антоний Падуанский","Агония в саду","Пьета","Святое семейство с пальмой","Мадонна с гвоздиками","Орлеанская Мадонна","Мадонна Макинтоша","Портрет кардинала Алессандро Фарнезе","Мадонна с канделябрами","Мадонна дель Пасседжо","Богородица с розой","Посещение","Святая Маргарита"];
+var A = ["Сотворение Евы из Адама","Святой Себастьян","Мадонна с младенцем и святыми","Мадонна Солли","Распятие (Алтарь Читта-ди-Кастелло)","Коронование Богородицы (Алтарь Одди)","Благовещение","Поклонение волхвов","Введение в храм","Мадонна Диоталеви","Мадонна с младенцем","Мадонна с младенцем на троне со святыми","Спосализио (Помолвка Девы Марии)","Мадонна Грандука","Мадонна с книгой (Мадонна Конестабиле)","Малая Мадонна Каупера","Святой Георгий и дракон","Святой Михаил и дракон","Святой Георгий, сражающийся с драконом","Мадонна Террануова","Благословение Христа (Pax Vobiscum)","Мадонна Бельведерская (Мадонна дель Прато)","Мадонна со щеглом","Богородица с младенцем и святым Иоанном Крестителем (La Belle Jardinière)","Мадонна Бриджуотера","Мадонна Каниджани","Мадонна дель Бальдаккино","Святое семейство с ягненком","Большая Мадонна Каупера","Мадонна с младенцем (Мадонна Темпи)","Мадонна с младенцем и младенцем Святым Иоанном","Святая Екатерина Александрийская","Мадонна Ансидеи","Мадонна с безбородым святым Иосифом","Погребение","Богословские добродетели","Папа Григорий IX утверждает декреталии","Кардинальные добродетели","Суд Соломона","Адам и Ева","Диспут о Святом Таинстве (La Disputa)","Изгнание Гелиодора из храма","Месса в Больсене","Освобождение Святого Петра","Встреча Льва Великого и Аттилы","Пожар в Борго","Битва при Остии","Коронация Карла Великого","Клятва Льва III","Крещение Константина","Папа Урбан I между Юстицией и Милосердием","Видение Креста","Дар Рима","Мадонна Колонна","Мадонна с вуалью","Мадонна Альдобрандини (Мадонна Гарва)","Мадонна с голубой диадемой","Портрет кардинала","Мадонна Альба","Мадонна Фолиньо","Пророк Исаия","Портрет Юлия II","Мадонна с рыбой","Сикстинская Мадонна","Мадонна дель Импанната","Сивиллы и пророки","Святая Сесилия","Мадонна в кресле","Мадонна делла Тенда","Портрет Томмазо Ингирами","Портрет кардинала Биббиены","Христос падает на пути к Голгофе","Разделение земли и воды","Сотворение животных","Моисей спасен из воды","Встреча Иакова с Рахилью","Суд Соломона","Авимелех шпионил за Исааком и Ревеккой","Сон Якова","Святое семейство","Святое семейство под дубом","Святое семейство, или Жемчужина","Святой Михаил и дьявол","Святой Иоанн Креститель в пустыне","Видение Иезекииля","Папа Лев X с кардиналами Джулио Медичи и Луиджи де Росси","Преображение","Чудесный улов рыбы","Чудесный улов рыбы","Святой Павел проповедует в Афинах","Передача ключей","Смерть Анании","Смерть Анании","Исцеление хромого человека","Святой Павел перед проконсулом","Воскресение Христа","Мадонна с ягненком","Ангел","Ангел со свитком","Бог Отец и Дева Мария","Святой Франциск Ассизский","Святой Антоний Падуанский","Агония в саду","Пьета","Святое семейство с пальмой","Мадонна с гвоздиками","Орлеанская Мадонна","Мадонна Макинтоша","Портрет кардинала Алессандро Фарнезе","Мадонна с канделябрами","Мадонна дель Пасседжо","Богородица с розой","Посещение","Святая Маргарита"];
 var Ac = ["ch","ci","cj","ck","cl","cm","cn","co","cp","cq","cr","cs","ct","cu","cv","cw","cx","cy","cz","d0","d1","d2","d3","d4","d5","d6","d7","d8","d9","da","db","dc","dd","de","df","dg","dh","di","dj","dk","dl","dm","dn","do","dp","dq","dr","ds","dt","du","dv","dw","dx","dz","e0","e1","e2","e3","e4","e5","e6","e7","e8","e9","ea","eb","ec","ed","ee","ef","eg","eh","ei","ej","ek","el","em","en","eo","ep","eq","er","es","et","eu","ev","ew","ex","ey","ez","f0","f1","f2","f3","f4","f5","f6","f7","f8","f9","fa","fb","fc","fd","fg","fh","fi","fj","fk","fl","fm","fn","fo","fp"];
+var Aa = ["raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello","raffaello"];
 </script>
-<div id="1"><div class="icon"><a href="f5.html"><img src="../image/h200/f5.jpg" title="Воскресение Христа, 1499–1502"></a></div> <div class="icon"><a href="ch.html"><img src="../image/h200/ch.jpg" title="Сотворение Евы из Адама, 1500"></a></div> <div class="icon"><a href="f9.html"><img src="../image/h200/f9.jpg" title="Бог Отец и Дева Мария, 1500-1501"></a></div> <div class="icon"><a href="f7.html"><img src="../image/h200/f7.jpg" title="Ангел, 1500-1501"></a></div> <div class="icon"><a href="f8.html"><img src="../image/h200/f8.jpg" title="Ангел со свитком, 1500-1501"></a></div> <div class="icon"><a href="ci.html"><img src="../image/h200/ci.jpg" title="Святой Себастьян, 1501-02"></a></div> <div class="icon"><a href="cn.html"><img src="../image/h200/cn.jpg" title="Благовещение, 1502-03"></a></div> <div class="icon"><a href="co.html"><img src="../image/h200/co.jpg" title="Поклонение волхвов, 1502-03"></a></div> <div class="icon"><a href="cp.html"><img src="../image/h200/cp.jpg" title="Введение в храм, 1502-03"></a></div> <div class="icon"><a href="fb.html"><img src="../image/h200/fb.jpg" title="Святой Антоний Падуанский, 1502"></a></div> <div class="icon"><a href="fa.html"><img src="../image/h200/fa.jpg" title="Святой Франциск Ассизский, 1502"></a></div> <div class="icon"><a href="cm.html"><img src="../image/h200/cm.jpg" title="Коронование Богородицы (Алтарь Одди), 1502-03"></a></div> <div class="icon"><a href="cl.html"><img src="../image/h200/cl.jpg" title="Распятие (Алтарь Читта-ди-Кастелло), 1502-03"></a></div> <div class="icon"><a href="ck.html"><img src="../image/h200/ck.jpg" title="Мадонна Солли, 1502"></a></div> <div class="icon"><a href="cj.html"><img src="../image/h200/cj.jpg" title="Мадонна с младенцем и святыми, 1502"></a></div> <div class="icon"><a href="cq.html"><img src="../image/h200/cq.jpg" title="Мадонна Диоталеви, 1503"></a></div> <div class="icon"><a href="cy.html"><img src="../image/h200/cy.jpg" title="Святой Михаил и дракон, 1503-05"></a></div> <div class="icon"><a href="cz.html"><img src="../image/h200/cz.jpg" title="Святой Георгий, сражающийся с драконом, 1503-05"></a></div> <div class="icon"><a href="cr.html"><img src="../image/h200/cr.jpg" title="Мадонна с младенцем, 1503"></a></div> <div class="icon"><a href="fd.html"><img src="../image/h200/fd.jpg" title="Пьета, 1504"></a></div> <div class="icon"><a href="fe.html"><img src="../image/h200/fe.jpg" title="Шествие на Голгофу, 1504-05"></a></div> <div class="icon"><a href="fc.html"><img src="../image/h200/fc.jpg" title="Агония в саду, 1504"></a></div> <div class="icon"><a href="cv.html"><img src="../image/h200/cv.jpg" title="Мадонна с книгой (Мадонна Конестабиле), 1504"></a></div> <div class="icon"><a href="cs.html"><img src="../image/h200/cs.jpg" title="Мадонна с младенцем на троне со святыми, 1504-05"></a></div> <div class="icon"><a href="ct.html"><img src="../image/h200/ct.jpg" title="Спосализио (Помолвка Девы Марии), 1504"></a></div> <div class="icon"><a href="cw.html"><img src="../image/h200/cw.jpg" title="Малая Мадонна Каупера, 1504-05"></a></div> <div class="icon"><a href="dd.html"><img src="../image/h200/dd.jpg" title="Мадонна с младенцем (Алтарь Ансидеи), 1505"></a></div> <div class="icon"><a href="cx.html"><img src="../image/h200/cx.jpg" title="Святой Георгий и дракон, 1505-06"></a></div> <div class="icon"><a href="d0.html"><img src="../image/h200/d0.jpg" title="Мадонна Террануова, 1505"></a></div> <div class="icon"><a href="ff.html"><img src="../image/h200/ff.jpg" title="Святой Иоанн Креститель проповедует, 1505"></a></div> <div class="icon"><a href="d1.html"><img src="../image/h200/d1.jpg" title="Благословение Христа (Pax Vobiscum), 1505-06"></a></div> <div class="icon"><a href="fh.html"><img src="../image/h200/fh.jpg" title="Мадонна с гвоздиками, 1506-07"></a></div> <div class="icon"><a href="cu.html"><img src="../image/h200/cu.jpg" title="Мадонна Грандука, 1506"></a></div> <div class="icon"><a href="f6.html"><img src="../image/h200/f6.jpg" title="Мадонна с ягненком, 1506-1508"></a></div> <div class="icon"><a href="de.html"><img src="../image/h200/de.jpg" title="Мадонна с безбородым святым Иосифом, 1506"></a></div> <div class="icon"><a href="d2.html"><img src="../image/h200/d2.jpg" title="Мадонна Бельведерская (Мадонна дель Прато), 1506"></a></div> <div class="icon"><a href="fg.html"><img src="../image/h200/fg.jpg" title="Святое семейство с пальмой, 1506"></a></div> <div class="icon"><a href="fi.html"><img src="../image/h200/fi.jpg" title="Орлеанская Мадонна, 1507"></a></div> <div class="icon"><a href="d3.html"><img src="../image/h200/d3.jpg" title="Мадонна со щеглом, 1507"></a></div> <div class="icon"><a href="df.html"><img src="../image/h200/df.jpg" title="Погребение, 1507"></a></div> <div class="icon"><a href="dg.html"><img src="../image/h200/dg.jpg" title="Богословские добродетели, 1507"></a></div> <div class="icon"><a href="d8.html"><img src="../image/h200/d8.jpg" title="Святое семейство с ягненком, 1507"></a></div> <div class="icon"><a href="d7.html"><img src="../image/h200/d7.jpg" title="Мадонна дель Бальдаккино, 1507-08"></a></div> <div class="icon"><a href="d6.html"><img src="../image/h200/d6.jpg" title="Мадонна Каниджани, 1507"></a></div> <div class="icon"><a href="d5.html"><img src="../image/h200/d5.jpg" title="Мадонна Бриджуотера, 1507"></a></div> <div class="icon"><a href="d4.html"><img src="../image/h200/d4.jpg" title="Богородица с младенцем и святым Иоанном Крестителем (La Belle Jardinière), 1507"></a></div> <div class="icon"><a href="dz.html"><img src="../image/h200/dz.jpg" title="Мадонна Колонна, 1508"></a></div> <div class="icon"><a href="d9.html"><img src="../image/h200/d9.jpg" title="Большая Мадонна Каупера, 1508"></a></div> <div class="icon"><a href="dc.html"><img src="../image/h200/dc.jpg" title="Святая Екатерина Александрийская, 1508"></a></div> <div class="icon"><a href="db.html"><img src="../image/h200/db.jpg" title="Мадонна с младенцем и младенцем Святым Иоанном, 1508"></a></div> <div class="icon"><a href="da.html"><img src="../image/h200/da.jpg" title="Мадонна с младенцем (Мадонна Темпи), 1508"></a></div> <div class="icon"><a href="dk.html"><img src="../image/h200/dk.jpg" title="Адам и Ева, 1509-11"></a></div> <div class="icon"><a href="dj.html"><img src="../image/h200/dj.jpg" title="Суд Соломона, 1509-11"></a></div> <div class="icon"><a href="fj.html"><img src="../image/h200/fj.jpg" title="Мадонна Макинтоша, 1509-1510"></a></div> <div class="icon"><a href="fk.html"><img src="../image/h200/fk.jpg" title="Портрет кардинала Алессандро Фарнезе, 1509-1511"></a></div> <div class="icon"><a href="e0.html"><img src="../image/h200/e0.jpg" title="Мадонна Лорето (Мадонна дель Вело), 1509-10"></a></div> <div class="icon"><a href="ef.html"><img src="../image/h200/ef.jpg" title="Портрет Томмазо Ингирами, 1510-14"></a></div> <div class="icon"><a href="e3.html"><img src="../image/h200/e3.jpg" title="Портрет кардинала, 1510-11"></a></div> <div class="icon"><a href="e2.html"><img src="../image/h200/e2.jpg" title="Мадонна с голубой диадемой, 1510-11"></a></div> <div class="icon"><a href="e1.html"><img src="../image/h200/e1.jpg" title="Мадонна Альдобрандини (Мадонна Гарва), 1510"></a></div> <div class="icon"><a href="dl.html"><img src="../image/h200/dl.jpg" title="Диспут о Святом Таинстве (La Disputa), 1510-11"></a></div> <div class="icon"><a href="dh.html"><img src="../image/h200/dh.jpg" title="Папа Григорий IX утверждает декреталии, 1510-11"></a></div> <div class="icon"><a href="e5.html"><img src="../image/h200/e5.jpg" title="Мадонна Фолиньо, 1511-12"></a></div> <div class="icon"><a href="e6.html"><img src="../image/h200/e6.jpg" title="Пророк Исаия, 1511-12"></a></div> <div class="icon"><a href="e4.html"><img src="../image/h200/e4.jpg" title="Мадонна Альба, 1511"></a></div> <div class="icon"><a href="dm.html"><img src="../image/h200/dm.jpg" title="Изгнание Гелиодора из храма, 1511-12"></a></div> <div class="icon"><a href="di.html"><img src="../image/h200/di.jpg" title="Кардинальные добродетели, 1511"></a></div> <div class="icon"><a href="dn.html"><img src="../image/h200/dn.jpg" title="Месса в Больсене, 1512"></a></div> <div class="icon"><a href="e8.html"><img src="../image/h200/e8.jpg" title="Мадонна с рыбой, 1512-14"></a></div> <div class="icon"><a href="e7.html"><img src="../image/h200/e7.jpg" title="Портрет Юлия II, 1512"></a></div> <div class="icon"><a href="fl.html"><img src="../image/h200/fl.jpg" title="Мадонна с канделябрами, 1513"></a></div> <div class="icon"><a href="e9.html"><img src="../image/h200/e9.jpg" title="Сикстинская Мадонна, 1513-14"></a></div> <div class="icon"><a href="ea.html"><img src="../image/h200/ea.jpg" title="Мадонна дель Импанната, 1513-14"></a></div> <div class="icon"><a href="ee.html"><img src="../image/h200/ee.jpg" title="Мадонна делла Тенда, 1514"></a></div> <div class="icon"><a href="eb.html"><img src="../image/h200/eb.jpg" title="Сивиллы и пророки, 1514"></a></div> <div class="icon"><a href="dr.html"><img src="../image/h200/dr.jpg" title="Битва при Остии, 1514-15"></a></div> <div class="icon"><a href="dq.html"><img src="../image/h200/dq.jpg" title="Пожар в Борго, 1514"></a></div> <div class="icon"><a href="do.html"><img src="../image/h200/do.jpg" title="Освобождение Святого Петра, 1514"></a></div> <div class="icon"><a href="dp.html"><img src="../image/h200/dp.jpg" title="Встреча Льва Великого и Аттилы, 1514"></a></div> <div class="icon"><a href="ec.html"><img src="../image/h200/ec.jpg" title="Святая Сесилия, 1514"></a></div> <div class="icon"><a href="ed.html"><img src="../image/h200/ed.jpg" title="Мадонна в кресле, 1514"></a></div> <div class="icon"><a href="f3.html"><img src="../image/h200/f3.jpg" title="Исцеление хромого человека, 1515-16"></a></div> <div class="icon"><a href="f2.html"><img src="../image/h200/f2.jpg" title="Смерть Анании, 1515"></a></div> <div class="icon"><a href="f1.html"><img src="../image/h200/f1.jpg" title="Смерть Анании, 1515"></a></div> <div class="icon"><a href="f0.html"><img src="../image/h200/f0.jpg" title="Передача ключей, 1515"></a></div> <div class="icon"><a href="ez.html"><img src="../image/h200/ez.jpg" title="Святой Павел проповедует в Афинах, 1515"></a></div> <div class="icon"><a href="ey.html"><img src="../image/h200/ey.jpg" title="Чудесный улов рыбы, 1515"></a></div> <div class="icon"><a href="f4.html"><img src="../image/h200/f4.jpg" title="Святой Павел перед проконсулом, 1515"></a></div> <div class="icon"><a href="ds.html"><img src="../image/h200/ds.jpg" title="Коронация Карла Великого, 1516-17"></a></div> <div class="icon"><a href="fn.html"><img src="../image/h200/fn.jpg" title="Богородица с розой, 1516"></a></div> <div class="icon"><a href="eg.html"><img src="../image/h200/eg.jpg" title="Портрет кардинала Биббиены, 1516"></a></div> <div class="icon"><a href="fm.html"><img src="../image/h200/fm.jpg" title="Мадонна дель Пасседжо, 1516"></a></div> <div class="icon"><a href="dt.html"><img src="../image/h200/dt.jpg" title="Клятва Льва III, 1516-17"></a></div> <div class="icon"><a href="fo.html"><img src="../image/h200/fo.jpg" title="Посещение, 1517"></a></div> <div class="icon"><a href="eu.html"><img src="../image/h200/eu.jpg" title="Видение Иезекииля, 1517-18"></a></div> <div class="icon"><a href="eh.html"><img src="../image/h200/eh.jpg" title="Христос падает на пути к Голгофе, 1517"></a></div> <div class="icon"><a href="ew.html"><img src="../image/h200/ew.jpg" title="Преображение, 1518-20"></a></div> <div class="icon"><a href="fp.html"><img src="../image/h200/fp.jpg" title="Святая Маргарита, 1518"></a></div> <div class="icon"><a href="ep.html"><img src="../image/h200/ep.jpg" title="Святое семейство, 1518"></a></div> <div class="icon"><a href="ei.html"><img src="../image/h200/ei.jpg" title="Разделение земли и воды, 1518-19"></a></div> </div><div id="2"style="display:none;"><div class="icon"><a href="ej.html"><img src="../image/h200/ej.jpg" title="Сотворение животных, 1518-19"></a></div> <div class="icon"><a href="ek.html"><img src="../image/h200/ek.jpg" title="Моисей спасен из воды, 1518-19"></a></div> <div class="icon"><a href="el.html"><img src="../image/h200/el.jpg" title="Встреча Иакова с Рахилью, 1518-19"></a></div> <div class="icon"><a href="em.html"><img src="../image/h200/em.jpg" title="Суд Соломона, 1518-19"></a></div> <div class="icon"><a href="en.html"><img src="../image/h200/en.jpg" title="Авимелех шпионил за Исааком и Ревеккой, 1518-19"></a></div> <div class="icon"><a href="eo.html"><img src="../image/h200/eo.jpg" title="Сон Якова, 1518-19"></a></div> <div class="icon"><a href="eq.html"><img src="../image/h200/eq.jpg" title="Святое семейство под дубом, 1518"></a></div> <div class="icon"><a href="er.html"><img src="../image/h200/er.jpg" title="Святое семейство, или Жемчужина, 1518"></a></div> <div class="icon"><a href="es.html"><img src="../image/h200/es.jpg" title="Святой Михаил и дьявол, 1518"></a></div> <div class="icon"><a href="et.html"><img src="../image/h200/et.jpg" title="Святой Иоанн Креститель в пустыне, 1518"></a></div> <div class="icon"><a href="ev.html"><img src="../image/h200/ev.jpg" title="Папа Лев X с кардиналами Джулио Медичи и Луиджи де Росси, 1518-19"></a></div> <div class="icon"><a href="ex.html"><img src="../image/h200/ex.jpg" title="Чудесный улов рыбы, 1519"></a></div> <div class="icon"><a href="dw.html"><img src="../image/h200/dw.jpg" title="Видение Креста, 1520-24"></a></div> <div class="icon"><a href="du.html"><img src="../image/h200/du.jpg" title="Крещение Константина, 1520-24"></a></div> <div class="icon"><a href="dv.html"><img src="../image/h200/dv.jpg" title="Папа Урбан I между Юстицией и Милосердием, 1520-24"></a></div> <div class="icon"><a href="dx.html"><img src="../image/h200/dx.jpg" title="Дар Рима, 1520-24"></a></div> <div class="icon"><a href="dy.html"><img src="../image/h200/dy.jpg" title="Закладка фундамента старой базилики Святого Петра, 1524"></a></div> </div><script>
-function changeDiv(x) {
-for (i = 1; i <= 2; i++) {
-document.getElementById(i).style.display = "none";
-if (document.getElementById("button"+i).classList.contains("sbutton")){
-document.getElementById("button"+i).classList.remove("sbutton");
-document.getElementById("button"+i).classList.add("ubutton");
-}
-}
-document.getElementById(x).style.display = "block";
-document.getElementById("button"+x).classList.remove("ubutton");
-document.getElementById("button"+x).classList.add("sbutton");
-}
-</script><div class="nbutton sbutton" onclick=changeDiv(1) id="button1">1</div> <div class="nbutton ubutton" onclick=changeDiv(2) id="button2">2</div> </div></div><div id="t"></div>
+<table>
+<style>
+td {border-bottom:solid thin black}
+</style>
+<tr id="f5"><td><a href="../image/big/f5.jpg" target=_blank><img src="../image/h200/f5.jpg" alt="Воскресение Христа" title="Воскресение Христа"></a></td><td valign=top><b>Воскресение Христа</b>
+<br>1499–1502
+<p>
+<p><a href="c_09.html">Воскресение</a>
+</td></tr><tr id="ch"><td><a href="../image/big/ch.jpg" target=_blank><img src="../image/h200/ch.jpg" alt="Сотворение Евы из Адама" title="Сотворение Евы из Адама"></a></td><td valign=top><b>Сотворение Евы из Адама</b>
+<br>1500
+<p>
+<p><a href="c_1f.html">Адам и Ева</a>
+</td></tr><tr id="f9"><td><a href="../image/big/f9.jpg" target=_blank><img src="../image/h200/f9.jpg" alt="Бог Отец и Дева Мария" title="Бог Отец и Дева Мария"></a></td><td valign=top><b>Бог Отец и Дева Мария</b>
+<br>1500-1501
+<p>
+<p><a href="c_1d.html">Бог Отец</a> <a href="c_1g.html">Портрет Богородицы</a>
+</td></tr><tr id="f7"><td><a href="../image/big/f7.jpg" target=_blank><img src="../image/h200/f7.jpg" alt="Ангел" title="Ангел"></a></td><td valign=top><b>Ангел</b>
+<br>1500-1501
+<p>
+<p><a href="c_15.html">Ангелы</a>
+</td></tr><tr id="f8"><td><a href="../image/big/f8.jpg" target=_blank><img src="../image/h200/f8.jpg" alt="Ангел со свитком" title="Ангел со свитком"></a></td><td valign=top><b>Ангел со свитком</b>
+<br>1500-1501
+<p>
+<p><a href="c_15.html">Ангелы</a>
+</td></tr><tr id="ci"><td><a href="../image/big/ci.jpg" target=_blank><img src="../image/h200/ci.jpg" alt="Святой Себастьян" title="Святой Себастьян"></a></td><td valign=top><b>Святой Себастьян</b>
+<br>1501-02
+<p>
+<p><a href="c_0a.html">Святые</a>
+</td></tr><tr id="cn"><td><a href="../image/big/cn.jpg" target=_blank><img src="../image/h200/cn.jpg" alt="Благовещение" title="Благовещение"></a></td><td valign=top><b>Благовещение</b>
+<br>1502-03
+<p>
+<p><a href="c_0j.html">Благовещение</a>
+</td></tr><tr id="co"><td><a href="../image/big/co.jpg" target=_blank><img src="../image/h200/co.jpg" alt="Поклонение волхвов" title="Поклонение волхвов"></a></td><td valign=top><b>Поклонение волхвов</b>
+<br>1502-03
+<p>
+<p><a href="c_0i.html">Поклонение Дитю</a>
+</td></tr><tr id="cp"><td><a href="../image/big/cp.jpg" target=_blank><img src="../image/h200/cp.jpg" alt="Введение в храм" title="Введение в храм"></a></td><td valign=top><b>Введение в храм</b>
+<br>1502-03
+<p>
+<p><a href="c_0o.html">Введение в храм</a>
+</td></tr><tr id="fb"><td><a href="../image/big/fb.jpg" target=_blank><img src="../image/h200/fb.jpg" alt="Святой Антоний Падуанский" title="Святой Антоний Падуанский"></a></td><td valign=top><b>Святой Антоний Падуанский</b>
+<br>1502
+<p>
+<p><a href="c_0a.html">Святые</a>
+</td></tr><tr id="fa"><td><a href="../image/big/fa.jpg" target=_blank><img src="../image/h200/fa.jpg" alt="Святой Франциск Ассизский" title="Святой Франциск Ассизский"></a></td><td valign=top><b>Святой Франциск Ассизский</b>
+<br>1502
+<p>
+<p><a href="c_0a.html">Святые</a>
+</td></tr><tr id="cm"><td><a href="../image/big/cm.jpg" target=_blank><img src="../image/h200/cm.jpg" alt="Коронование Богородицы (Алтарь Одди)" title="Коронование Богородицы (Алтарь Одди)"></a></td><td valign=top><b>Коронование Богородицы (Алтарь Одди)</b>
+<br>1502-03
+<p>
+<p><a href="c_0k.html">Коронация Богородицы</a>
+</td></tr><tr id="cl"><td><a href="../image/big/cl.jpg" target=_blank><img src="../image/h200/cl.jpg" alt="Распятие (Алтарь Читта-ди-Кастелло)" title="Распятие (Алтарь Читта-ди-Кастелло)"></a></td><td valign=top><b>Распятие (Алтарь Читта-ди-Кастелло)</b>
+<br>1502-03
+<p>
+<p><a href="c_04.html">Распятие</a>
+</td></tr><tr id="ck"><td><a href="../image/big/ck.jpg" target=_blank><img src="../image/h200/ck.jpg" alt="Мадонна Солли" title="Мадонна Солли"></a></td><td valign=top><b>Мадонна Солли</b>
+<br>1502
+<p>
+<p><a href="c_01.html">Богородица и Дитя</a>
+</td></tr><tr id="cj"><td><a href="../image/big/cj.jpg" target=_blank><img src="../image/h200/cj.jpg" alt="Мадонна с младенцем и святыми" title="Мадонна с младенцем и святыми"></a></td><td valign=top><b>Мадонна с младенцем и святыми</b>
+<br>1502
+<p>
+<p><a href="c_01.html">Богородица и Дитя</a>
+</td></tr><tr id="cq"><td><a href="../image/big/cq.jpg" target=_blank><img src="../image/h200/cq.jpg" alt="Мадонна Диоталеви" title="Мадонна Диоталеви"></a></td><td valign=top><b>Мадонна Диоталеви</b>
+<br>1503
+<p>
+<p><a href="c_01.html">Богородица и Дитя</a>
+</td></tr><tr id="cy"><td><a href="../image/big/cy.jpg" target=_blank><img src="../image/h200/cy.jpg" alt="Святой Михаил и дракон" title="Святой Михаил и дракон"></a></td><td valign=top><b>Святой Михаил и дракон</b>
+<br>1503-05
+<p>
+<p><a href="c_0a.html">Святые</a>
+</td></tr><tr id="cz"><td><a href="../image/big/cz.jpg" target=_blank><img src="../image/h200/cz.jpg" alt="Святой Георгий, сражающийся с драконом" title="Святой Георгий, сражающийся с драконом"></a></td><td valign=top><b>Святой Георгий, сражающийся с драконом</b>
+<br>1503-05
+<p>
+<p><a href="c_0a.html">Святые</a>
+</td></tr><tr id="cr"><td><a href="../image/big/cr.jpg" target=_blank><img src="../image/h200/cr.jpg" alt="Мадонна с младенцем" title="Мадонна с младенцем"></a></td><td valign=top><b>Мадонна с младенцем</b>
+<br>1503
+<p>
+<p><a href="c_01.html">Богородица и Дитя</a>
+</td></tr><tr id="fd"><td><a href="../image/big/fd.jpg" target=_blank><img src="../image/h200/fd.jpg" alt="Пьета" title="Пьета"></a></td><td valign=top><b>Пьета</b>
+<br>1504
+<p>
+<p><a href="c_17.html">Оплакивание Христа</a>
+</td></tr><tr id="fe"><td><a href="../image/big/fe.jpg" target=_blank><img src="../image/h200/fe.jpg" alt="Шествие на Голгофу" title="Шествие на Голгофу"></a></td><td valign=top><b>Шествие на Голгофу</b>
+<br>1504-05
+<p>
+<p><a href="c_10.html">Страсти Христовы</a>
+</td></tr><tr id="fc"><td><a href="../image/big/fc.jpg" target=_blank><img src="../image/h200/fc.jpg" alt="Агония в саду" title="Агония в саду"></a></td><td valign=top><b>Агония в саду</b>
+<br>1504
+<p>
+<p><a href="c_10.html">Страсти Христовы</a>
+</td></tr><tr id="cv"><td><a href="../image/big/cv.jpg" target=_blank><img src="../image/h200/cv.jpg" alt="Мадонна с книгой (Мадонна Конестабиле)" title="Мадонна с книгой (Мадонна Конестабиле)"></a></td><td valign=top><b>Мадонна с книгой (Мадонна Конестабиле)</b>
+<br>1504
+<p>
+<p><a href="c_01.html">Богородица и Дитя</a>
+</td></tr><tr id="cs"><td><a href="../image/big/cs.jpg" target=_blank><img src="../image/h200/cs.jpg" alt="Мадонна с младенцем на троне со святыми" title="Мадонна с младенцем на троне со святыми"></a></td><td valign=top><b>Мадонна с младенцем на троне со святыми</b>
+<br>1504-05
+<p>
+<p><a href="c_01.html">Богородица и Дитя</a>
+</td></tr><tr id="ct"><td><a href="../image/big/ct.jpg" target=_blank><img src="../image/h200/ct.jpg" alt="Спосализио (Помолвка Девы Марии)" title="Спосализио (Помолвка Девы Марии)"></a></td><td valign=top><b>Спосализио (Помолвка Девы Марии)</b>
+<br>1504
+<p>
+<p><a href="c_0p.html">Сцены из жизни Богородицы</a>
+</td></tr><tr id="cw"><td><a href="../image/big/cw.jpg" target=_blank><img src="../image/h200/cw.jpg" alt="Малая Мадонна Каупера" title="Малая Мадонна Каупера"></a></td><td valign=top><b>Малая Мадонна Каупера</b>
+<br>1504-05
+<p>
+<p><a href="c_01.html">Богородица и Дитя</a>
+</td></tr><tr id="dd"><td><a href="../image/big/dd.jpg" target=_blank><img src="../image/h200/dd.jpg" alt="Мадонна Ансидеи" title="Мадонна Ансидеи"></a></td><td valign=top><b>Мадонна Ансидеи</b>
+<br>1505
+<p>
+<p><a href="c_01.html">Богородица и Дитя</a>
+</td></tr><tr id="cx"><td><a href="../image/big/cx.jpg" target=_blank><img src="../image/h200/cx.jpg" alt="Святой Георгий и дракон" title="Святой Георгий и дракон"></a></td><td valign=top><b>Святой Георгий и дракон</b>
+<br>1505-06
+<p>
+<p><a href="c_0a.html">Святые</a>
+</td></tr><tr id="d0"><td><a href="../image/big/d0.jpg" target=_blank><img src="../image/h200/d0.jpg" alt="Мадонна Террануова" title="Мадонна Террануова"></a></td><td valign=top><b>Мадонна Террануова</b>
+<br>1505
+<p>
+<p><a href="c_01.html">Богородица и Дитя</a>
+</td></tr><tr id="ff"><td><a href="../image/big/ff.jpg" target=_blank><img src="../image/h200/ff.jpg" alt="Святой Иоанн Креститель проповедует" title="Святой Иоанн Креститель проповедует"></a></td><td valign=top><b>Святой Иоанн Креститель проповедует</b>
+<br>1505
+<p>
+<p><a href="c_0h.html">Иоанн Креститель</a>
+</td></tr><tr id="d1"><td><a href="../image/big/d1.jpg" target=_blank><img src="../image/h200/d1.jpg" alt="Благословение Христа (Pax Vobiscum)" title="Благословение Христа (Pax Vobiscum)"></a></td><td valign=top><b>Благословение Христа (Pax Vobiscum)</b>
+<br>1505-06
+<p>
+<p><a href="c_0w.html">Портрет Иисуса</a>
+</td></tr><tr id="fh"><td><a href="../image/big/fh.jpg" target=_blank><img src="../image/h200/fh.jpg" alt="Мадонна с гвоздиками" title="Мадонна с гвоздиками"></a></td><td valign=top><b>Мадонна с гвоздиками</b>
+<br>1506-07
+<p>
+<p><a href="c_01.html">Богородица и Дитя</a>
+</td></tr><tr id="cu"><td><a href="../image/big/cu.jpg" target=_blank><img src="../image/h200/cu.jpg" alt="Мадонна Грандука" title="Мадонна Грандука"></a></td><td valign=top><b>Мадонна Грандука</b>
+<br>1506
+<p>
+<p><a href="c_01.html">Богородица и Дитя</a>
+</td></tr><tr id="f6"><td><a href="../image/big/f6.jpg" target=_blank><img src="../image/h200/f6.jpg" alt="Мадонна с ягненком" title="Мадонна с ягненком"></a></td><td valign=top><b>Мадонна с ягненком</b>
+<br>1506-1508
+<p>
+<p><a href="c_01.html">Богородица и Дитя</a>
+</td></tr><tr id="de"><td><a href="../image/big/de.jpg" target=_blank><img src="../image/h200/de.jpg" alt="Мадонна с безбородым святым Иосифом" title="Мадонна с безбородым святым Иосифом"></a></td><td valign=top><b>Мадонна с безбородым святым Иосифом</b>
+<br>1506
+<p>
+<p><a href="c_01.html">Богородица и Дитя</a>
+</td></tr><tr id="d2"><td><a href="../image/big/d2.jpg" target=_blank><img src="../image/h200/d2.jpg" alt="Мадонна Бельведерская (Мадонна дель Прато)" title="Мадонна Бельведерская (Мадонна дель Прато)"></a></td><td valign=top><b>Мадонна Бельведерская (Мадонна дель Прато)</b>
+<br>1506
+<p>
+<p><a href="c_01.html">Богородица и Дитя</a>
+</td></tr><tr id="fg"><td><a href="../image/big/fg.jpg" target=_blank><img src="../image/h200/fg.jpg" alt="Святое семейство с пальмой" title="Святое семейство с пальмой"></a></td><td valign=top><b>Святое семейство с пальмой</b>
+<br>1506
+<p>
+<p><a href="c_01.html">Богородица и Дитя</a>
+</td></tr><tr id="fi"><td><a href="../image/big/fi.jpg" target=_blank><img src="../image/h200/fi.jpg" alt="Орлеанская Мадонна" title="Орлеанская Мадонна"></a></td><td valign=top><b>Орлеанская Мадонна</b>
+<br>1507
+<p>
+<p><a href="c_01.html">Богородица и Дитя</a>
+</td></tr><tr id="d3"><td><a href="../image/big/d3.jpg" target=_blank><img src="../image/h200/d3.jpg" alt="Мадонна со щеглом" title="Мадонна со щеглом"></a></td><td valign=top><b>Мадонна со щеглом</b>
+<br>1507
+<p>
+<p><a href="c_01.html">Богородица и Дитя</a>
+</td></tr><tr id="df"><td><a href="../image/big/df.jpg" target=_blank><img src="../image/h200/df.jpg" alt="Погребение" title="Погребение"></a></td><td valign=top><b>Погребение</b>
+<br>1507
+<p>
+<p><a href="c_17.html">Оплакивание Христа</a>
+</td></tr><tr id="dg"><td><a href="../image/big/dg.jpg" target=_blank><img src="../image/h200/dg.jpg" alt="Богословские добродетели" title="Богословские добродетели"></a></td><td valign=top><b>Богословские добродетели</b>
+<br>1507
+<p>(Вера, надежда и милосердие)
+<p><a href="c_16.html">Добродетели</a>
+</td></tr><tr id="d8"><td><a href="../image/big/d8.jpg" target=_blank><img src="../image/h200/d8.jpg" alt="Святое семейство с ягненком" title="Святое семейство с ягненком"></a></td><td valign=top><b>Святое семейство с ягненком</b>
+<br>1507
+<p>
+<p><a href="c_01.html">Богородица и Дитя</a>
+</td></tr><tr id="d7"><td><a href="../image/big/d7.jpg" target=_blank><img src="../image/h200/d7.jpg" alt="Мадонна дель Бальдаккино" title="Мадонна дель Бальдаккино"></a></td><td valign=top><b>Мадонна дель Бальдаккино</b>
+<br>1507-08
+<p>
+<p><a href="c_01.html">Богородица и Дитя</a>
+</td></tr><tr id="d6"><td><a href="../image/big/d6.jpg" target=_blank><img src="../image/h200/d6.jpg" alt="Мадонна Каниджани" title="Мадонна Каниджани"></a></td><td valign=top><b>Мадонна Каниджани</b>
+<br>1507
+<p>
+<p><a href="c_01.html">Богородица и Дитя</a>
+</td></tr><tr id="d5"><td><a href="../image/big/d5.jpg" target=_blank><img src="../image/h200/d5.jpg" alt="Мадонна Бриджуотера" title="Мадонна Бриджуотера"></a></td><td valign=top><b>Мадонна Бриджуотера</b>
+<br>1507
+<p>
+<p><a href="c_01.html">Богородица и Дитя</a>
+</td></tr><tr id="d4"><td><a href="../image/big/d4.jpg" target=_blank><img src="../image/h200/d4.jpg" alt="Богородица с младенцем и святым Иоанном Крестителем (La Belle Jardinière)" title="Богородица с младенцем и святым Иоанном Крестителем (La Belle Jardinière)"></a></td><td valign=top><b>Богородица с младенцем и святым Иоанном Крестителем (La Belle Jardinière)</b>
+<br>1507
+<p>
+<p><a href="c_01.html">Богородица и Дитя</a>
+</td></tr><tr id="dz"><td><a href="../image/big/dz.jpg" target=_blank><img src="../image/h200/dz.jpg" alt="Мадонна Колонна" title="Мадонна Колонна"></a></td><td valign=top><b>Мадонна Колонна</b>
+<br>1508
+<p>
+<p><a href="c_01.html">Богородица и Дитя</a>
+</td></tr><tr id="d9"><td><a href="../image/big/d9.jpg" target=_blank><img src="../image/h200/d9.jpg" alt="Большая Мадонна Каупера" title="Большая Мадонна Каупера"></a></td><td valign=top><b>Большая Мадонна Каупера</b>
+<br>1508
+<p>
+<p><a href="c_01.html">Богородица и Дитя</a>
+</td></tr><tr id="dc"><td><a href="../image/big/dc.jpg" target=_blank><img src="../image/h200/dc.jpg" alt="Святая Екатерина Александрийская" title="Святая Екатерина Александрийская"></a></td><td valign=top><b>Святая Екатерина Александрийская</b>
+<br>1508
+<p>
+<p><a href="c_0a.html">Святые</a>
+</td></tr><tr id="db"><td><a href="../image/big/db.jpg" target=_blank><img src="../image/h200/db.jpg" alt="Мадонна с младенцем и младенцем Святым Иоанном" title="Мадонна с младенцем и младенцем Святым Иоанном"></a></td><td valign=top><b>Мадонна с младенцем и младенцем Святым Иоанном</b>
+<br>1508
+<p>
+<p><a href="c_01.html">Богородица и Дитя</a>
+</td></tr><tr id="da"><td><a href="../image/big/da.jpg" target=_blank><img src="../image/h200/da.jpg" alt="Мадонна с младенцем (Мадонна Темпи)" title="Мадонна с младенцем (Мадонна Темпи)"></a></td><td valign=top><b>Мадонна с младенцем (Мадонна Темпи)</b>
+<br>1508
+<p>
+<p><a href="c_01.html">Богородица и Дитя</a>
+</td></tr><tr id="dk"><td><a href="../image/big/dk.jpg" target=_blank><img src="../image/h200/dk.jpg" alt="Адам и Ева" title="Адам и Ева"></a></td><td valign=top><b>Адам и Ева</b>
+<br>1509-11
+<p>
+<p><a href="c_1f.html">Адам и Ева</a>
+</td></tr><tr id="dj"><td><a href="../image/big/dj.jpg" target=_blank><img src="../image/h200/dj.jpg" alt="Суд Соломона" title="Суд Соломона"></a></td><td valign=top><b>Суд Соломона</b>
+<br>1509-11
+<p>
+<p><a href="c_1l.html">Соломон</a>
+</td></tr><tr id="fj"><td><a href="../image/big/fj.jpg" target=_blank><img src="../image/h200/fj.jpg" alt="Мадонна Макинтоша" title="Мадонна Макинтоша"></a></td><td valign=top><b>Мадонна Макинтоша</b>
+<br>1509-1510
+<p>
+<p><a href="c_01.html">Богородица и Дитя</a>
+</td></tr><tr id="fk"><td><a href="../image/big/fk.jpg" target=_blank><img src="../image/h200/fk.jpg" alt="Портрет кардинала Алессандро Фарнезе" title="Портрет кардинала Алессандро Фарнезе"></a></td><td valign=top><b>Портрет кардинала Алессандро Фарнезе</b>
+<br>1509-1511
+<p>
+<p><a href="c_0q.html">Церковь</a>
+</td></tr><tr id="e0"><td><a href="../image/big/e0.jpg" target=_blank><img src="../image/h200/e0.jpg" alt="Мадонна с вуалью" title="Мадонна с вуалью"></a></td><td valign=top><b>Мадонна с вуалью</b>
+<br>1509-10
+<p>
+<p><a href="c_01.html">Богородица и Дитя</a>
+</td></tr><tr id="ef"><td><a href="../image/big/ef.jpg" target=_blank><img src="../image/h200/ef.jpg" alt="Портрет Томмазо Ингирами" title="Портрет Томмазо Ингирами"></a></td><td valign=top><b>Портрет Томмазо Ингирами</b>
+<br>1510-14
+<p>
+<p><a href="c_0q.html">Церковь</a>
+</td></tr><tr id="e3"><td><a href="../image/big/e3.jpg" target=_blank><img src="../image/h200/e3.jpg" alt="Портрет кардинала" title="Портрет кардинала"></a></td><td valign=top><b>Портрет кардинала</b>
+<br>1510-11
+<p>
+<p><a href="c_0q.html">Церковь</a>
+</td></tr><tr id="e2"><td><a href="../image/big/e2.jpg" target=_blank><img src="../image/h200/e2.jpg" alt="Мадонна с голубой диадемой" title="Мадонна с голубой диадемой"></a></td><td valign=top><b>Мадонна с голубой диадемой</b>
+<br>1510-11
+<p>
+<p><a href="c_01.html">Богородица и Дитя</a>
+</td></tr><tr id="e1"><td><a href="../image/big/e1.jpg" target=_blank><img src="../image/h200/e1.jpg" alt="Мадонна Альдобрандини (Мадонна Гарва)" title="Мадонна Альдобрандини (Мадонна Гарва)"></a></td><td valign=top><b>Мадонна Альдобрандини (Мадонна Гарва)</b>
+<br>1510
+<p>
+<p><a href="c_01.html">Богородица и Дитя</a>
+</td></tr><tr id="dl"><td><a href="../image/big/dl.jpg" target=_blank><img src="../image/h200/dl.jpg" alt="Диспут о Святом Таинстве (La Disputa)" title="Диспут о Святом Таинстве (La Disputa)"></a></td><td valign=top><b>Диспут о Святом Таинстве (La Disputa)</b>
+<br>1510-11
+<p>
+<p><a href="c_0q.html">Церковь</a>
+</td></tr><tr id="dh"><td><a href="../image/big/dh.jpg" target=_blank><img src="../image/h200/dh.jpg" alt="Папа Григорий IX утверждает декреталии" title="Папа Григорий IX утверждает декреталии"></a></td><td valign=top><b>Папа Григорий IX утверждает декреталии</b>
+<br>1510-11
+<p>
+<p><a href="c_0q.html">Церковь</a>
+</td></tr><tr id="e5"><td><a href="../image/big/e5.jpg" target=_blank><img src="../image/h200/e5.jpg" alt="Мадонна Фолиньо" title="Мадонна Фолиньо"></a></td><td valign=top><b>Мадонна Фолиньо</b>
+<br>1511-12
+<p>
+<p><a href="c_01.html">Богородица и Дитя</a>
+</td></tr><tr id="e6"><td><a href="../image/big/e6.jpg" target=_blank><img src="../image/h200/e6.jpg" alt="Пророк Исаия" title="Пророк Исаия"></a></td><td valign=top><b>Пророк Исаия</b>
+<br>1511-12
+<p>
+<p><a href="c_12.html">Пророки</a>
+</td></tr><tr id="e4"><td><a href="../image/big/e4.jpg" target=_blank><img src="../image/h200/e4.jpg" alt="Мадонна Альба" title="Мадонна Альба"></a></td><td valign=top><b>Мадонна Альба</b>
+<br>1511
+<p>
+<p><a href="c_01.html">Богородица и Дитя</a>
+</td></tr><tr id="dm"><td><a href="../image/big/dm.jpg" target=_blank><img src="../image/h200/dm.jpg" alt="Изгнание Гелиодора из храма" title="Изгнание Гелиодора из храма"></a></td><td valign=top><b>Изгнание Гелиодора из храма</b>
+<br>1511-12
+<p>
+<p><a href="c_0l.html">Сюжети Старого Завета</a>
+</td></tr><tr id="di"><td><a href="../image/big/di.jpg" target=_blank><img src="../image/h200/di.jpg" alt="Кардинальные добродетели" title="Кардинальные добродетели"></a></td><td valign=top><b>Кардинальные добродетели</b>
+<br>1511
+<p>
+<p><a href="c_16.html">Добродетели</a>
+</td></tr><tr id="dn"><td><a href="../image/big/dn.jpg" target=_blank><img src="../image/h200/dn.jpg" alt="Месса в Больсене" title="Месса в Больсене"></a></td><td valign=top><b>Месса в Больсене</b>
+<br>1512
+<p>
+<p><a href="c_0q.html">Церковь</a>
+</td></tr><tr id="e8"><td><a href="../image/big/e8.jpg" target=_blank><img src="../image/h200/e8.jpg" alt="Мадонна с рыбой" title="Мадонна с рыбой"></a></td><td valign=top><b>Мадонна с рыбой</b>
+<br>1512-14
+<p>
+<p><a href="c_01.html">Богородица и Дитя</a>
+</td></tr><tr id="e7"><td><a href="../image/big/e7.jpg" target=_blank><img src="../image/h200/e7.jpg" alt="Портрет Юлия II" title="Портрет Юлия II"></a></td><td valign=top><b>Портрет Юлия II</b>
+<br>1512
+<p>
+<p><a href="c_0q.html">Церковь</a>
+</td></tr><tr id="fl"><td><a href="../image/big/fl.jpg" target=_blank><img src="../image/h200/fl.jpg" alt="Мадонна с канделябрами" title="Мадонна с канделябрами"></a></td><td valign=top><b>Мадонна с канделябрами</b>
+<br>1513
+<p>
+<p><a href="c_01.html">Богородица и Дитя</a>
+</td></tr><tr id="e9"><td><a href="../image/big/e9.jpg" target=_blank><img src="../image/h200/e9.jpg" alt="Сикстинская Мадонна" title="Сикстинская Мадонна"></a></td><td valign=top><b>Сикстинская Мадонна</b>
+<br>1513-14
+<p>
+<p><a href="c_01.html">Богородица и Дитя</a>
+</td></tr><tr id="ea"><td><a href="../image/big/ea.jpg" target=_blank><img src="../image/h200/ea.jpg" alt="Мадонна дель Импанната" title="Мадонна дель Импанната"></a></td><td valign=top><b>Мадонна дель Импанната</b>
+<br>1513-14
+<p>
+<p><a href="c_01.html">Богородица и Дитя</a>
+</td></tr><tr id="ee"><td><a href="../image/big/ee.jpg" target=_blank><img src="../image/h200/ee.jpg" alt="Мадонна делла Тенда" title="Мадонна делла Тенда"></a></td><td valign=top><b>Мадонна делла Тенда</b>
+<br>1514
+<p>
+<p><a href="c_01.html">Богородица и Дитя</a>
+</td></tr><tr id="eb"><td><a href="../image/big/eb.jpg" target=_blank><img src="../image/h200/eb.jpg" alt="Сивиллы и пророки" title="Сивиллы и пророки"></a></td><td valign=top><b>Сивиллы и пророки</b>
+<br>1514
+<p>
+<p><a href="c_12.html">Пророки</a>
+</td></tr><tr id="dr"><td><a href="../image/big/dr.jpg" target=_blank><img src="../image/h200/dr.jpg" alt="Битва при Остии" title="Битва при Остии"></a></td><td valign=top><b>Битва при Остии</b>
+<br>1514-15
+<p>
+<p><a href="c_0q.html">Церковь</a>
+</td></tr><tr id="dq"><td><a href="../image/big/dq.jpg" target=_blank><img src="../image/h200/dq.jpg" alt="Пожар в Борго" title="Пожар в Борго"></a></td><td valign=top><b>Пожар в Борго</b>
+<br>1514
+<p>
+<p><a href="c_0q.html">Церковь</a>
+</td></tr><tr id="do"><td><a href="../image/big/do.jpg" target=_blank><img src="../image/h200/do.jpg" alt="Освобождение Святого Петра" title="Освобождение Святого Петра"></a></td><td valign=top><b>Освобождение Святого Петра</b>
+<br>1514
+<p>
+<p><a href="c_0z.html">Апостол Петр</a>
+</td></tr><tr id="dp"><td><a href="../image/big/dp.jpg" target=_blank><img src="../image/h200/dp.jpg" alt="Встреча Льва Великого и Аттилы" title="Встреча Льва Великого и Аттилы"></a></td><td valign=top><b>Встреча Льва Великого и Аттилы</b>
+<br>1514
+<p>
+<p><a href="c_0q.html">Церковь</a>
+</td></tr><tr id="ec"><td><a href="../image/big/ec.jpg" target=_blank><img src="../image/h200/ec.jpg" alt="Святая Сесилия" title="Святая Сесилия"></a></td><td valign=top><b>Святая Сесилия</b>
+<br>1514
+<p>
+<p><a href="c_0a.html">Святые</a>
+</td></tr><tr id="ed"><td><a href="../image/big/ed.jpg" target=_blank><img src="../image/h200/ed.jpg" alt="Мадонна в кресле" title="Мадонна в кресле"></a></td><td valign=top><b>Мадонна в кресле</b>
+<br>1514
+<p>
+<p><a href="c_01.html">Богородица и Дитя</a>
+</td></tr><tr id="f3"><td><a href="../image/big/f3.jpg" target=_blank><img src="../image/h200/f3.jpg" alt="Исцеление хромого человека" title="Исцеление хромого человека"></a></td><td valign=top><b>Исцеление хромого человека</b>
+<br>1515-16
+<p>
+<p><a href="c_19.html">Служение Иисуса</a>
+</td></tr><tr id="f2"><td><a href="../image/big/f2.jpg" target=_blank><img src="../image/h200/f2.jpg" alt="Смерть Анании" title="Смерть Анании"></a></td><td valign=top><b>Смерть Анании</b>
+<br>1515
+<p>
+<p><a href="c_03.html">Сюжеты Нового Завета</a>
+</td></tr><tr id="f1"><td><a href="../image/big/f1.jpg" target=_blank><img src="../image/h200/f1.jpg" alt="Смерть Анании" title="Смерть Анании"></a></td><td valign=top><b>Смерть Анании</b>
+<br>1515
+<p>
+<p><a href="c_03.html">Сюжеты Нового Завета</a>
+</td></tr><tr id="f0"><td><a href="../image/big/f0.jpg" target=_blank><img src="../image/h200/f0.jpg" alt="Передача ключей" title="Передача ключей"></a></td><td valign=top><b>Передача ключей</b>
+<br>1515
+<p>
+<p><a href="c_09.html">Воскресение</a>
+</td></tr><tr id="ez"><td><a href="../image/big/ez.jpg" target=_blank><img src="../image/h200/ez.jpg" alt="Святой Павел проповедует в Афинах" title="Святой Павел проповедует в Афинах"></a></td><td valign=top><b>Святой Павел проповедует в Афинах</b>
+<br>1515
+<p>
+<p><a href="c_0u.html">Апостол Павел</a>
+</td></tr><tr id="ey"><td><a href="../image/big/ey.jpg" target=_blank><img src="../image/h200/ey.jpg" alt="Чудесный улов рыбы" title="Чудесный улов рыбы"></a></td><td valign=top><b>Чудесный улов рыбы</b>
+<br>1515
+<p>
+<p><a href="c_19.html">Служение Иисуса</a>
+</td></tr><tr id="f4"><td><a href="../image/big/f4.jpg" target=_blank><img src="../image/h200/f4.jpg" alt="Святой Павел перед проконсулом" title="Святой Павел перед проконсулом"></a></td><td valign=top><b>Святой Павел перед проконсулом</b>
+<br>1515
+<p>
+<p><a href="c_0u.html">Апостол Павел</a>
+</td></tr><tr id="ds"><td><a href="../image/big/ds.jpg" target=_blank><img src="../image/h200/ds.jpg" alt="Коронация Карла Великого" title="Коронация Карла Великого"></a></td><td valign=top><b>Коронация Карла Великого</b>
+<br>1516-17
+<p>
+<p><a href="c_0q.html">Церковь</a>
+</td></tr><tr id="fn"><td><a href="../image/big/fn.jpg" target=_blank><img src="../image/h200/fn.jpg" alt="Богородица с розой" title="Богородица с розой"></a></td><td valign=top><b>Богородица с розой</b>
+<br>1516
+<p>
+<p><a href="c_01.html">Богородица и Дитя</a>
+</td></tr><tr id="eg"><td><a href="../image/big/eg.jpg" target=_blank><img src="../image/h200/eg.jpg" alt="Портрет кардинала Биббиены" title="Портрет кардинала Биббиены"></a></td><td valign=top><b>Портрет кардинала Биббиены</b>
+<br>1516
+<p>
+<p><a href="c_0q.html">Церковь</a>
+</td></tr><tr id="fm"><td><a href="../image/big/fm.jpg" target=_blank><img src="../image/h200/fm.jpg" alt="Мадонна дель Пасседжо" title="Мадонна дель Пасседжо"></a></td><td valign=top><b>Мадонна дель Пасседжо</b>
+<br>1516
+<p>
+<p><a href="c_01.html">Богородица и Дитя</a>
+</td></tr><tr id="dt"><td><a href="../image/big/dt.jpg" target=_blank><img src="../image/h200/dt.jpg" alt="Клятва Льва III" title="Клятва Льва III"></a></td><td valign=top><b>Клятва Льва III</b>
+<br>1516-17
+<p>
+<p><a href="c_0q.html">Церковь</a>
+</td></tr><tr id="fo"><td><a href="../image/big/fo.jpg" target=_blank><img src="../image/h200/fo.jpg" alt="Посещение" title="Посещение"></a></td><td valign=top><b>Посещение</b>
+<br>1517
+<p>
+<p><a href="c_0p.html">Сцены из жизни Богородицы</a>
+</td></tr><tr id="eu"><td><a href="../image/big/eu.jpg" target=_blank><img src="../image/h200/eu.jpg" alt="Видение Иезекииля" title="Видение Иезекииля"></a></td><td valign=top><b>Видение Иезекииля</b>
+<br>1517-18
+<p>
+<p><a href="c_1d.html">Бог Отец</a>
+</td></tr><tr id="eh"><td><a href="../image/big/eh.jpg" target=_blank><img src="../image/h200/eh.jpg" alt="Христос падает на пути к Голгофе" title="Христос падает на пути к Голгофе"></a></td><td valign=top><b>Христос падает на пути к Голгофе</b>
+<br>1517
+<p>
+<p><a href="c_10.html">Страсти Христовы</a>
+</td></tr><tr id="ew"><td><a href="../image/big/ew.jpg" target=_blank><img src="../image/h200/ew.jpg" alt="Преображение" title="Преображение"></a></td><td valign=top><b>Преображение</b>
+<br>1518-20
+<p>
+<p><a href="c_1a.html">Преображение</a>
+</td></tr><tr id="fp"><td><a href="../image/big/fp.jpg" target=_blank><img src="../image/h200/fp.jpg" alt="Святая Маргарита" title="Святая Маргарита"></a></td><td valign=top><b>Святая Маргарита</b>
+<br>1518
+<p>
+<p><a href="c_0a.html">Святые</a>
+</td></tr><tr id="ep"><td><a href="../image/big/ep.jpg" target=_blank><img src="../image/h200/ep.jpg" alt="Святое семейство" title="Святое семейство"></a></td><td valign=top><b>Святое семейство</b>
+<br>1518
+<p>
+<p><a href="c_01.html">Богородица и Дитя</a>
+</td></tr><tr id="ei"><td><a href="../image/big/ei.jpg" target=_blank><img src="../image/h200/ei.jpg" alt="Разделение земли и воды" title="Разделение земли и воды"></a></td><td valign=top><b>Разделение земли и воды</b>
+<br>1518-19
+<p>
+<p><a href="c_1e.html">Сотворение мира</a>
+</td></tr><tr id="ej"><td><a href="../image/big/ej.jpg" target=_blank><img src="../image/h200/ej.jpg" alt="Сотворение животных" title="Сотворение животных"></a></td><td valign=top><b>Сотворение животных</b>
+<br>1518-19
+<p>
+<p><a href="c_1e.html">Сотворение мира</a>
+</td></tr><tr id="ek"><td><a href="../image/big/ek.jpg" target=_blank><img src="../image/h200/ek.jpg" alt="Моисей спасен из воды" title="Моисей спасен из воды"></a></td><td valign=top><b>Моисей спасен из воды</b>
+<br>1518-19
+<p>
+<p><a href="c_1j.html">Моисей</a>
+</td></tr><tr id="el"><td><a href="../image/big/el.jpg" target=_blank><img src="../image/h200/el.jpg" alt="Встреча Иакова с Рахилью" title="Встреча Иакова с Рахилью"></a></td><td valign=top><b>Встреча Иакова с Рахилью</b>
+<br>1518-19
+<p>
+<p><a href="c_0l.html">Сюжети Старого Завета</a>
+</td></tr><tr id="em"><td><a href="../image/big/em.jpg" target=_blank><img src="../image/h200/em.jpg" alt="Суд Соломона" title="Суд Соломона"></a></td><td valign=top><b>Суд Соломона</b>
+<br>1518-19
+<p>
+<p><a href="c_1l.html">Соломон</a>
+</td></tr><tr id="en"><td><a href="../image/big/en.jpg" target=_blank><img src="../image/h200/en.jpg" alt="Авимелех шпионил за Исааком и Ревеккой" title="Авимелех шпионил за Исааком и Ревеккой"></a></td><td valign=top><b>Авимелех шпионил за Исааком и Ревеккой</b>
+<br>1518-19
+<p>
+<p><a href="c_0l.html">Сюжети Старого Завета</a>
+</td></tr><tr id="eo"><td><a href="../image/big/eo.jpg" target=_blank><img src="../image/h200/eo.jpg" alt="Сон Якова" title="Сон Якова"></a></td><td valign=top><b>Сон Якова</b>
+<br>1518-19
+<p>
+<p><a href="c_0l.html">Сюжети Старого Завета</a>
+</td></tr><tr id="eq"><td><a href="../image/big/eq.jpg" target=_blank><img src="../image/h200/eq.jpg" alt="Святое семейство под дубом" title="Святое семейство под дубом"></a></td><td valign=top><b>Святое семейство под дубом</b>
+<br>1518
+<p>
+<p><a href="c_01.html">Богородица и Дитя</a>
+</td></tr><tr id="er"><td><a href="../image/big/er.jpg" target=_blank><img src="../image/h200/er.jpg" alt="Святое семейство, или Жемчужина" title="Святое семейство, или Жемчужина"></a></td><td valign=top><b>Святое семейство, или Жемчужина</b>
+<br>1518
+<p>
+<p><a href="c_01.html">Богородица и Дитя</a>
+</td></tr><tr id="es"><td><a href="../image/big/es.jpg" target=_blank><img src="../image/h200/es.jpg" alt="Святой Михаил и дьявол" title="Святой Михаил и дьявол"></a></td><td valign=top><b>Святой Михаил и дьявол</b>
+<br>1518
+<p>
+<p><a href="c_0a.html">Святые</a>
+</td></tr><tr id="et"><td><a href="../image/big/et.jpg" target=_blank><img src="../image/h200/et.jpg" alt="Святой Иоанн Креститель в пустыне" title="Святой Иоанн Креститель в пустыне"></a></td><td valign=top><b>Святой Иоанн Креститель в пустыне</b>
+<br>1518
+<p>
+<p><a href="c_0h.html">Иоанн Креститель</a>
+</td></tr><tr id="ev"><td><a href="../image/big/ev.jpg" target=_blank><img src="../image/h200/ev.jpg" alt="Папа Лев X с кардиналами Джулио Медичи и Луиджи де Росси" title="Папа Лев X с кардиналами Джулио Медичи и Луиджи де Росси"></a></td><td valign=top><b>Папа Лев X с кардиналами Джулио Медичи и Луиджи де Росси</b>
+<br>1518-19
+<p>
+<p><a href="c_0q.html">Церковь</a>
+</td></tr><tr id="ex"><td><a href="../image/big/ex.jpg" target=_blank><img src="../image/h200/ex.jpg" alt="Чудесный улов рыбы" title="Чудесный улов рыбы"></a></td><td valign=top><b>Чудесный улов рыбы</b>
+<br>1519
+<p>
+<p><a href="c_19.html">Служение Иисуса</a>
+</td></tr><tr id="dw"><td><a href="../image/big/dw.jpg" target=_blank><img src="../image/h200/dw.jpg" alt="Видение Креста" title="Видение Креста"></a></td><td valign=top><b>Видение Креста</b>
+<br>1520-24
+<p>
+<p><a href="c_0q.html">Церковь</a>
+</td></tr><tr id="du"><td><a href="../image/big/du.jpg" target=_blank><img src="../image/h200/du.jpg" alt="Крещение Константина" title="Крещение Константина"></a></td><td valign=top><b>Крещение Константина</b>
+<br>1520-24
+<p>
+<p><a href="c_0q.html">Церковь</a>
+</td></tr><tr id="dv"><td><a href="../image/big/dv.jpg" target=_blank><img src="../image/h200/dv.jpg" alt="Папа Урбан I между Юстицией и Милосердием" title="Папа Урбан I между Юстицией и Милосердием"></a></td><td valign=top><b>Папа Урбан I между Юстицией и Милосердием</b>
+<br>1520-24
+<p>
+<p><a href="c_0q.html">Церковь</a>
+</td></tr><tr id="dx"><td><a href="../image/big/dx.jpg" target=_blank><img src="../image/h200/dx.jpg" alt="Дар Рима" title="Дар Рима"></a></td><td valign=top><b>Дар Рима</b>
+<br>1520-24
+<p>
+<p><a href="c_0q.html">Церковь</a>
+</td></tr><tr id="dy"><td><a href="../image/big/dy.jpg" target=_blank><img src="../image/h200/dy.jpg" alt="Закладка фундамента старой базилики Святого Петра" title="Закладка фундамента старой базилики Святого Петра"></a></td><td valign=top><b>Закладка фундамента старой базилики Святого Петра</b>
+<br>1524
+<p>
+<p><a href="c_0q.html">Церковь</a>
+</td></tr></table></div></div><div id="t"></div>
 <hr><span class="flag flag-england"></span> <a href="../en/raffaello.html">English</a> | <span class="flag flag-ru"></span> <b>Русский</b> | <span class="flag flag-ua"></span> <a href="../uk/raffaello.html">Українська</a>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript" >
