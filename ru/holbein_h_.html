@@ -10,7 +10,24 @@
 <h1 style="display:inline-table">Ганс Гольбейн Младший</h1>
 <div style="display:inline-table">(1497 - 1543)</div>
 <br>
-<div id="g"><div class="more">
+<form><select id="select" name="select" onchange="change()"><option value="g">галлерея</option><option value="t">тест</option></select></form>
+<script src="../service/js/engine.js"></script>
+
+<script>
+function change() {
+var elem = document.getElementById("select");
+
+if(select.value=="g") {document.getElementById("t").style.display = "none";document.getElementById("g").style.display = "block"; }
+if(select.value=="t") {
+test ();
+}
+}
+</script><div id="g"><div class="more">
+<script>
+var A = ["Святая Варвара","Адам и Ева","Золотурнская мадонна","Святая Урсула","Не прикасайся ко мне","Тайная вечеря","Поклонение волхвов","Рождество","Страсти","Христос на Елеонской горе","Арест в саду","Христос перед Пилатом","Христос, несущий крест","Солдаты бросают жребий под распятием","Погребение","Дармштадтская Мадонна","Святой Иоанн Креститель","Высокомерие Ровоама","Соломон и царица Савская","Муж скорбей","Аллегория Ветхого и Нового Заветов","Мать скорбящая"];
+var Ac = ["1c7","1c8","1c9","1ca","1cb","1cc","1cd","1ce","1cf","1cg","1ch","1ci","1cj","1ck","1cl","1cm","1cn","1co","1cq","1er","1es","1et"];
+var Aa = ["holbein_h_","holbein_h_","holbein_h_","holbein_h_","holbein_h_","holbein_h_","holbein_h_","holbein_h_","holbein_h_","holbein_h_","holbein_h_","holbein_h_","holbein_h_","holbein_h_","holbein_h_","holbein_h_","holbein_h_","holbein_h_","holbein_h_","holbein_h_","holbein_h_","holbein_h_","holbein_h_"];
+</script>
 <table>
 <style>
 td {border-bottom:solid thin black}
@@ -27,14 +44,22 @@ td {border-bottom:solid thin black}
 <br>1519-20
 <p>
 <p><a href="c_0h.html">Иоанн Креститель</a>
-</td></tr><tr id="1cd"><td><a href="../image/big/1cd.jpg" target=_blank><img src="../image/h200/1cd.jpg" alt="Поклонение волхвов" title="Поклонение волхвов"></a></td><td valign=top><b>Поклонение волхвов</b>
-<br>1521-22
+</td></tr><tr id="1er"><td><a href="../image/big/1er.jpg" target=_blank><img src="../image/h200/1er.jpg" alt="Муж скорбей" title="Муж скорбей"></a></td><td valign=top><b>Муж скорбей</b>
+<br>1520
 <p>
-<p><a href="c_0i.html">Поклонение Дитю</a>
+<p><a href="c_0y.html">Муж скорбей</a>
+</td></tr><tr id="1et"><td><a href="../image/big/1et.jpg" target=_blank><img src="../image/h200/1et.jpg" alt="Мать скорбящая" title="Мать скорбящая"></a></td><td valign=top><b>Мать скорбящая</b>
+<br>1520
+<p>
+<p><a href="c_1g.html">Портрет Богородицы</a>
 </td></tr><tr id="1ce"><td><a href="../image/big/1ce.jpg" target=_blank><img src="../image/h200/1ce.jpg" alt="Рождество" title="Рождество"></a></td><td valign=top><b>Рождество</b>
 <br>1521-22
 <p>
 <p><a href="c_0e.html">Рождество</a>
+</td></tr><tr id="1cd"><td><a href="../image/big/1cd.jpg" target=_blank><img src="../image/h200/1cd.jpg" alt="Поклонение волхвов" title="Поклонение волхвов"></a></td><td valign=top><b>Поклонение волхвов</b>
+<br>1521-22
+<p>
+<p><a href="c_0i.html">Поклонение Дитю</a>
 </td></tr><tr id="1c9"><td><a href="../image/big/1c9.jpg" target=_blank><img src="../image/h200/1c9.jpg" alt="Золотурнская мадонна" title="Золотурнская мадонна"></a></td><td valign=top><b>Золотурнская мадонна</b>
 <br>1522
 <p>
@@ -43,23 +68,27 @@ td {border-bottom:solid thin black}
 <br>1523
 <p>
 <p><a href="c_0a.html">Святые</a>
-</td></tr><tr id="1cl"><td><a href="../image/big/1cl.jpg" target=_blank><img src="../image/h200/1cl.jpg" alt="Погребение" title="Погребение"></a></td><td valign=top><b>Погребение</b>
+</td></tr><tr id="1cc"><td><a href="../image/big/1cc.jpg" target=_blank><img src="../image/h200/1cc.jpg" alt="Тайная вечеря" title="Тайная вечеря"></a></td><td valign=top><b>Тайная вечеря</b>
 <br>1524-25
 <p>
-<p><a href="c_17.html">Оплакивание Христа</a>
+<p><a href="c_11.html">Тайная вечеря</a>
 </td></tr><tr id="1ck"><td><a href="../image/big/1ck.jpg" target=_blank><img src="../image/h200/1ck.jpg" alt="Солдаты бросают жребий под распятием" title="Солдаты бросают жребий под распятием"></a></td><td valign=top><b>Солдаты бросают жребий под распятием</b>
 <br>1524-25
 <p>
 <p><a href="c_10.html">Страсти Христовы</a>
+</td></tr><tr id="1cl"><td><a href="../image/big/1cl.jpg" target=_blank><img src="../image/h200/1cl.jpg" alt="Погребение" title="Погребение"></a></td><td valign=top><b>Погребение</b>
+<br>1524-25
+<p>
+<p><a href="c_17.html">Оплакивание Христа</a>
 </td></tr><tr id="1cj"><td><a href="../image/big/1cj.jpg" target=_blank><img src="../image/h200/1cj.jpg" alt="Христос, несущий крест" title="Христос, несущий крест"></a></td><td valign=top><b>Христос, несущий крест</b>
 <br>1524-25
 <p>
 <p><a href="c_10.html">Страсти Христовы</a>
-</td></tr><tr id="1ch"><td><a href="../image/big/1ch.jpg" target=_blank><img src="../image/h200/1ch.jpg" alt="Арест в саду" title="Арест в саду"></a></td><td valign=top><b>Арест в саду</b>
-<br>1524-25
+</td></tr><tr id="1cb"><td><a href="../image/big/1cb.jpg" target=_blank><img src="../image/h200/1cb.jpg" alt="Не прикасайся ко мне" title="Не прикасайся ко мне"></a></td><td valign=top><b>Не прикасайся ко мне</b>
+<br>1524
 <p>
-<p><a href="c_10.html">Страсти Христовы</a>
-</td></tr><tr id="1ci"><td><a href="../image/big/1ci.jpg" target=_blank><img src="../image/h200/1ci.jpg" alt="Христос перед Пилатом" title="Христос перед Пилатом"></a></td><td valign=top><b>Христос перед Пилатом</b>
+<p><a href="c_09.html">Воскресение</a>
+</td></tr><tr id="1ch"><td><a href="../image/big/1ch.jpg" target=_blank><img src="../image/h200/1ch.jpg" alt="Арест в саду" title="Арест в саду"></a></td><td valign=top><b>Арест в саду</b>
 <br>1524-25
 <p>
 <p><a href="c_10.html">Страсти Христовы</a>
@@ -71,14 +100,10 @@ td {border-bottom:solid thin black}
 <br>1524-25
 <p>
 <p><a href="c_10.html">Страсти Христовы</a> <a href="c_03.html">Сюжеты Нового Завета</a>
-</td></tr><tr id="1cc"><td><a href="../image/big/1cc.jpg" target=_blank><img src="../image/h200/1cc.jpg" alt="Тайная вечеря" title="Тайная вечеря"></a></td><td valign=top><b>Тайная вечеря</b>
+</td></tr><tr id="1ci"><td><a href="../image/big/1ci.jpg" target=_blank><img src="../image/h200/1ci.jpg" alt="Христос перед Пилатом" title="Христос перед Пилатом"></a></td><td valign=top><b>Христос перед Пилатом</b>
 <br>1524-25
 <p>
-<p><a href="c_11.html">Тайная вечеря</a>
-</td></tr><tr id="1cb"><td><a href="../image/big/1cb.jpg" target=_blank><img src="../image/h200/1cb.jpg" alt="Не прикасайся ко мне" title="Не прикасайся ко мне"></a></td><td valign=top><b>Не прикасайся ко мне</b>
-<br>1524
-<p>
-<p><a href="c_09.html">Воскресение</a>
+<p><a href="c_10.html">Страсти Христовы</a>
 </td></tr><tr id="1cm"><td><a href="../image/big/1cm.jpg" target=_blank><img src="../image/h200/1cm.jpg" alt="Дармштадтская Мадонна" title="Дармштадтская Мадонна"></a></td><td valign=top><b>Дармштадтская Мадонна</b>
 <br>1526
 <p>
@@ -95,6 +120,10 @@ td {border-bottom:solid thin black}
 <br>1534-35
 <p>
 <p><a href="c_1l.html">Соломон</a>
+</td></tr><tr id="1es"><td><a href="../image/big/1es.jpg" target=_blank><img src="../image/h200/1es.jpg" alt="Аллегория Ветхого и Нового Заветов" title="Аллегория Ветхого и Нового Заветов"></a></td><td valign=top><b>Аллегория Ветхого и Нового Заветов</b>
+<br>1535
+<p>
+<p><a href="c_0l.html">Сюжети Старого Завета</a> <a href="c_03.html">Сюжеты Нового Завета</a>
 </td></tr></table></div></div><div id="t"></div>
 <hr><span class="flag flag-england"></span> <a href="../en/holbein_h_.html">English</a> | <span class="flag flag-ru"></span> <b>Русский</b> | <span class="flag flag-ua"></span> <a href="../uk/holbein_h_.html">Українська</a>
 <!-- Yandex.Metrika counter -->

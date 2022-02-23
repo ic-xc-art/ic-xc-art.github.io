@@ -10,7 +10,24 @@
 <h1 style="display:inline-table">Мартен ван Хемскерк</h1>
 <div style="display:inline-table">(1498 - 1574)</div>
 <br>
-<div id="g"><div class="more">
+<form><select id="select" name="select" onchange="change()"><option value="g">галлерея</option><option value="t">тест</option></select></form>
+<script src="../service/js/engine.js"></script>
+
+<script>
+function change() {
+var elem = document.getElementById("select");
+
+if(select.value=="g") {document.getElementById("t").style.display = "none";document.getElementById("g").style.display = "block"; }
+if(select.value=="t") {
+test ();
+}
+}
+</script><div id="g"><div class="more">
+<script>
+var A = ["Отдых на пути в Египет","Святой Лука рисует Богородицу с младенцем","Муж скорбей","Муж скорбей","Страшный суд","Оплакивание Христа","Благовещение","Распятие","Распятие (Триптих)","Распятие","Ecce Homo Триптих","Триптих погребения","пророки Исайя и Иеремия","Оплакивание мертвого Христа","Святой Лука рисует Богородицу","Триптих","Христос увенчан терновым венцом","Грехопадение","Богородица и святой Иоанн Богослов","Christ Mocked and Crowned with Thorns","Самсон, растерзающий льва","Николай Чудотворец","Николай Чудотворец","Иосиф и жена Потифара","Юдифь показывает голову Олоферна"];
+var Ac = ["1aj","1ak","1al","1am","1an","1ao","1ap","1aq","1ar","1as","1at","1au","1av","1aw","1ax","1ay","1az","1b0","1ek","1el","1em","1en","1eo","1ep","1eq"];
+var Aa = ["heemskerck","heemskerck","heemskerck","heemskerck","heemskerck","heemskerck","heemskerck","heemskerck","heemskerck","heemskerck","heemskerck","heemskerck","heemskerck","heemskerck","heemskerck","heemskerck","heemskerck","heemskerck","heemskerck","heemskerck","heemskerck","heemskerck","heemskerck","heemskerck","heemskerck"];
+</script>
 <table>
 <style>
 td {border-bottom:solid thin black}
@@ -27,14 +44,14 @@ td {border-bottom:solid thin black}
 <br>1530
 <p>
 <p><a href="c_1f.html">Адам и Ева</a>
-</td></tr><tr id="1ak"><td><a href="../image/big/1ak.jpg" target=_blank><img src="../image/h200/1ak.jpg" alt="Святой Лука рисует Богородицу с младенцем" title="Святой Лука рисует Богородицу с младенцем"></a></td><td valign=top><b>Святой Лука рисует Богородицу с младенцем</b>
-<br>1532
-<p>
-<p><a href="c_01.html">Богородица и Дитя</a>
 </td></tr><tr id="1am"><td><a href="../image/big/1am.jpg" target=_blank><img src="../image/h200/1am.jpg" alt="Муж скорбей" title="Муж скорбей"></a></td><td valign=top><b>Муж скорбей</b>
 <br>1532
 <p>
 <p><a href="c_0y.html">Муж скорбей</a>
+</td></tr><tr id="1ak"><td><a href="../image/big/1ak.jpg" target=_blank><img src="../image/h200/1ak.jpg" alt="Святой Лука рисует Богородицу с младенцем" title="Святой Лука рисует Богородицу с младенцем"></a></td><td valign=top><b>Святой Лука рисует Богородицу с младенцем</b>
+<br>1532
+<p>
+<p><a href="c_01.html">Богородица и Дитя</a>
 </td></tr><tr id="1an"><td><a href="../image/big/1an.jpg" target=_blank><img src="../image/h200/1an.jpg" alt="Страшный суд" title="Страшный суд"></a></td><td valign=top><b>Страшный суд</b>
 <br>1537
 <p>
@@ -43,7 +60,7 @@ td {border-bottom:solid thin black}
 <br>1538-42
 <p>
 <p><a href="c_04.html">Распятие</a>
-</td></tr><tr id="1as"><td><a href="../image/big/1as.jpg" target=_blank><img src="../image/h200/1as.jpg" alt="Распятие (Триптих)" title="Распятие (Триптих)"></a></td><td valign=top><b>Распятие (Триптих)</b>
+</td></tr><tr id="1as"><td><a href="../image/big/1as.jpg" target=_blank><img src="../image/h200/1as.jpg" alt="Распятие" title="Распятие"></a></td><td valign=top><b>Распятие</b>
 <br>1538-42
 <p>
 <p><a href="c_04.html">Распятие</a>
@@ -51,6 +68,18 @@ td {border-bottom:solid thin black}
 <br>1540-43
 <p>
 <p><a href="c_17.html">Оплакивание Христа</a>
+</td></tr><tr id="1ek"><td><a href="../image/big/1ek.jpg" target=_blank><img src="../image/h200/1ek.jpg" alt="Богородица и святой Иоанн Богослов" title="Богородица и святой Иоанн Богослов"></a></td><td valign=top><b>Богородица и святой Иоанн Богослов</b>
+<br>1540
+<p>
+<p><a href="c_0a.html">Святые</a>
+</td></tr><tr id="1eo"><td><a href="../image/big/1eo.jpg" target=_blank><img src="../image/h200/1eo.jpg" alt="Николай Чудотворец" title="Николай Чудотворец"></a></td><td valign=top><b>Николай Чудотворец</b>
+<br>1540
+<p>
+<p><a href="c_1n.html">Святой Николай</a>
+</td></tr><tr id="1en"><td><a href="../image/big/1en.jpg" target=_blank><img src="../image/h200/1en.jpg" alt="Николай Чудотворец" title="Николай Чудотворец"></a></td><td valign=top><b>Николай Чудотворец</b>
+<br>1540
+<p>
+<p><a href="c_1n.html">Святой Николай</a>
 </td></tr><tr id="1aq"><td><a href="../image/big/1aq.jpg" target=_blank><img src="../image/h200/1aq.jpg" alt="Распятие" title="Распятие"></a></td><td valign=top><b>Распятие</b>
 <br>1543
 <p>
@@ -63,26 +92,42 @@ td {border-bottom:solid thin black}
 <br>1548
 <p>
 <p><a href="c_10.html">Страсти Христовы</a>
+</td></tr><tr id="1em"><td><a href="../image/big/1em.jpg" target=_blank><img src="../image/h200/1em.jpg" alt="Самсон, растерзающий льва" title="Самсон, растерзающий льва"></a></td><td valign=top><b>Самсон, растерзающий льва</b>
+<br>1550-60
+<p>
+<p><a href="c_0l.html">Сюжети Старого Завета</a>
 </td></tr><tr id="1ax"><td><a href="../image/big/1ax.jpg" target=_blank><img src="../image/h200/1ax.jpg" alt="Святой Лука рисует Богородицу" title="Святой Лука рисует Богородицу"></a></td><td valign=top><b>Святой Лука рисует Богородицу</b>
 <br>1550-53
 <p>
 <p><a href="c_01.html">Богородица и Дитя</a>
-</td></tr><tr id="1at"><td><a href="../image/big/1at.jpg" target=_blank><img src="../image/h200/1at.jpg" alt="Ecce Homo Триптих" title="Ecce Homo Триптих"></a></td><td valign=top><b>Ecce Homo Триптих</b>
-<br>1559-60
+</td></tr><tr id="1el"><td><a href="../image/big/1el.jpg" target=_blank><img src="../image/h200/1el.jpg" alt="Christ Mocked and Crowned with Thorns" title="Christ Mocked and Crowned with Thorns"></a></td><td valign=top><b>Christ Mocked and Crowned with Thorns</b>
+<br>1550-55
 <p>
 <p><a href="c_10.html">Страсти Христовы</a>
-</td></tr><tr id="1au"><td><a href="../image/big/1au.jpg" target=_blank><img src="../image/h200/1au.jpg" alt="Триптих погребения" title="Триптих погребения"></a></td><td valign=top><b>Триптих погребения</b>
-<br>1559-60
-<p>
-<p><a href="c_17.html">Оплакивание Христа</a>
 </td></tr><tr id="1av"><td><a href="../image/big/1av.jpg" target=_blank><img src="../image/h200/1av.jpg" alt="пророки Исайя и Иеремия" title="пророки Исайя и Иеремия"></a></td><td valign=top><b>пророки Исайя и Иеремия</b>
 <br>1559-60
 <p>
 <p><a href="c_12.html">Пророки</a>
+</td></tr><tr id="1au"><td><a href="../image/big/1au.jpg" target=_blank><img src="../image/h200/1au.jpg" alt="Триптих погребения" title="Триптих погребения"></a></td><td valign=top><b>Триптих погребения</b>
+<br>1559-60
+<p>
+<p><a href="c_17.html">Оплакивание Христа</a>
+</td></tr><tr id="1at"><td><a href="../image/big/1at.jpg" target=_blank><img src="../image/h200/1at.jpg" alt="Ecce Homo Триптих" title="Ecce Homo Триптих"></a></td><td valign=top><b>Ecce Homo Триптих</b>
+<br>1559-60
+<p>
+<p><a href="c_10.html">Страсти Христовы</a>
+</td></tr><tr id="1eq"><td><a href="../image/big/1eq.jpg" target=_blank><img src="../image/h200/1eq.jpg" alt="Юдифь показывает голову Олоферна" title="Юдифь показывает голову Олоферна"></a></td><td valign=top><b>Юдифь показывает голову Олоферна</b>
+<br>1564
+<p>
+<p><a href="c_1k.html">Юдит</a>
 </td></tr><tr id="1aw"><td><a href="../image/big/1aw.jpg" target=_blank><img src="../image/h200/1aw.jpg" alt="Оплакивание мертвого Христа" title="Оплакивание мертвого Христа"></a></td><td valign=top><b>Оплакивание мертвого Христа</b>
 <br>1566
 <p>
 <p><a href="c_17.html">Оплакивание Христа</a>
+</td></tr><tr id="1ep"><td><a href="../image/big/1ep.jpg" target=_blank><img src="../image/h200/1ep.jpg" alt="Иосиф и жена Потифара" title="Иосиф и жена Потифара"></a></td><td valign=top><b>Иосиф и жена Потифара</b>
+<br>1566
+<p>
+<p><a href="c_0l.html">Сюжети Старого Завета</a>
 </td></tr><tr id="1ay"><td><a href="../image/big/1ay.jpg" target=_blank><img src="../image/h200/1ay.jpg" alt="Триптих" title="Триптих"></a></td><td valign=top><b>Триптих</b>
 <br>
 <p>

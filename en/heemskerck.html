@@ -10,7 +10,24 @@
 <h1 style="display:inline-table">Maarten van Heemskerck</h1>
 <div style="display:inline-table">(1498 - 1574)</div>
 <br>
-<div id="g"><div class="more">
+<form><select id="select" name="select" onchange="change()"><option value="g">gallery</option><option value="t">test</option></select></form>
+<script src="../service/js/engine.js"></script>
+
+<script>
+function change() {
+var elem = document.getElementById("select");
+
+if(select.value=="g") {document.getElementById("t").style.display = "none";document.getElementById("g").style.display = "block"; }
+if(select.value=="t") {
+test ();
+}
+}
+</script><div id="g"><div class="more">
+<script>
+var A = ["Rest on the Flight into Egypt","St Luke Painting the Virgin and Child","Man of Sorrows","Man of Sorrows","Last Judgment","Lamentation of Christ","Annunciation","The Crucifixion","Crucifixion (Triptych)","Crucifixion","Ecce Homo Triptych","Triptych of the Entombment","prophets Isaiah and Jeremiah","Lamentation on the Dead Christ","St Luke Painting the Virgin","Triptych","Christ Being Crowned with Thorns","The Fall","The Virgin and Saint John the Evangelist","Christ Mocked and Crowned with Thorns","Samson Rending the Lion","Bishop Saint","Bishop Saint","Joseph and Potiphar's Wife","Judith Showing the Head of Holofernes"];
+var Ac = ["1aj","1ak","1al","1am","1an","1ao","1ap","1aq","1ar","1as","1at","1au","1av","1aw","1ax","1ay","1az","1b0","1ek","1el","1em","1en","1eo","1ep","1eq"];
+var Aa = ["heemskerck","heemskerck","heemskerck","heemskerck","heemskerck","heemskerck","heemskerck","heemskerck","heemskerck","heemskerck","heemskerck","heemskerck","heemskerck","heemskerck","heemskerck","heemskerck","heemskerck","heemskerck","heemskerck","heemskerck","heemskerck","heemskerck","heemskerck","heemskerck","heemskerck"];
+</script>
 <table>
 <style>
 td {border-bottom:solid thin black}
@@ -27,14 +44,14 @@ td {border-bottom:solid thin black}
 <br>1530
 <p>
 <p><a href="c_1f.html">Adam & Eve</a>
-</td></tr><tr id="1ak"><td><a href="../image/big/1ak.jpg" target=_blank><img src="../image/h200/1ak.jpg" alt="St Luke Painting the Virgin and Child" title="St Luke Painting the Virgin and Child"></a></td><td valign=top><b>St Luke Painting the Virgin and Child</b>
-<br>1532
-<p>
-<p><a href="c_01.html">Virgin & Child</a>
 </td></tr><tr id="1am"><td><a href="../image/big/1am.jpg" target=_blank><img src="../image/h200/1am.jpg" alt="Man of Sorrows" title="Man of Sorrows"></a></td><td valign=top><b>Man of Sorrows</b>
 <br>1532
 <p>
 <p><a href="c_0y.html">Man of Sorrows</a>
+</td></tr><tr id="1ak"><td><a href="../image/big/1ak.jpg" target=_blank><img src="../image/h200/1ak.jpg" alt="St Luke Painting the Virgin and Child" title="St Luke Painting the Virgin and Child"></a></td><td valign=top><b>St Luke Painting the Virgin and Child</b>
+<br>1532
+<p>
+<p><a href="c_01.html">Virgin & Child</a>
 </td></tr><tr id="1an"><td><a href="../image/big/1an.jpg" target=_blank><img src="../image/h200/1an.jpg" alt="Last Judgment" title="Last Judgment"></a></td><td valign=top><b>Last Judgment</b>
 <br>1537
 <p>
@@ -43,7 +60,7 @@ td {border-bottom:solid thin black}
 <br>1538-42
 <p>
 <p><a href="c_04.html">Crucifixion</a>
-</td></tr><tr id="1as"><td><a href="../image/big/1as.jpg" target=_blank><img src="../image/h200/1as.jpg" alt="Crucifixion (Triptych)" title="Crucifixion (Triptych)"></a></td><td valign=top><b>Crucifixion (Triptych)</b>
+</td></tr><tr id="1as"><td><a href="../image/big/1as.jpg" target=_blank><img src="../image/h200/1as.jpg" alt="Crucifixion" title="Crucifixion"></a></td><td valign=top><b>Crucifixion</b>
 <br>1538-42
 <p>
 <p><a href="c_04.html">Crucifixion</a>
@@ -51,6 +68,18 @@ td {border-bottom:solid thin black}
 <br>1540-43
 <p>
 <p><a href="c_17.html">Lamentation over Christ</a>
+</td></tr><tr id="1ek"><td><a href="../image/big/1ek.jpg" target=_blank><img src="../image/h200/1ek.jpg" alt="The Virgin and Saint John the Evangelist" title="The Virgin and Saint John the Evangelist"></a></td><td valign=top><b>The Virgin and Saint John the Evangelist</b>
+<br>1540
+<p>
+<p><a href="c_0a.html">Saints</a>
+</td></tr><tr id="1eo"><td><a href="../image/big/1eo.jpg" target=_blank><img src="../image/h200/1eo.jpg" alt="Bishop Saint" title="Bishop Saint"></a></td><td valign=top><b>Bishop Saint</b>
+<br>1540
+<p>
+<p><a href="c_1n.html">St Nicholas</a>
+</td></tr><tr id="1en"><td><a href="../image/big/1en.jpg" target=_blank><img src="../image/h200/1en.jpg" alt="Bishop Saint" title="Bishop Saint"></a></td><td valign=top><b>Bishop Saint</b>
+<br>1540
+<p>
+<p><a href="c_1n.html">St Nicholas</a>
 </td></tr><tr id="1aq"><td><a href="../image/big/1aq.jpg" target=_blank><img src="../image/h200/1aq.jpg" alt="The Crucifixion" title="The Crucifixion"></a></td><td valign=top><b>The Crucifixion</b>
 <br>1543
 <p>
@@ -63,26 +92,42 @@ td {border-bottom:solid thin black}
 <br>1548
 <p>
 <p><a href="c_10.html">Passion of the Christ</a>
+</td></tr><tr id="1em"><td><a href="../image/big/1em.jpg" target=_blank><img src="../image/h200/1em.jpg" alt="Samson Rending the Lion" title="Samson Rending the Lion"></a></td><td valign=top><b>Samson Rending the Lion</b>
+<br>1550-60
+<p>
+<p><a href="c_0l.html">Scenes from the Old Testament</a>
 </td></tr><tr id="1ax"><td><a href="../image/big/1ax.jpg" target=_blank><img src="../image/h200/1ax.jpg" alt="St Luke Painting the Virgin" title="St Luke Painting the Virgin"></a></td><td valign=top><b>St Luke Painting the Virgin</b>
 <br>1550-53
 <p>
 <p><a href="c_01.html">Virgin & Child</a>
-</td></tr><tr id="1at"><td><a href="../image/big/1at.jpg" target=_blank><img src="../image/h200/1at.jpg" alt="Ecce Homo Triptych" title="Ecce Homo Triptych"></a></td><td valign=top><b>Ecce Homo Triptych</b>
-<br>1559-60
+</td></tr><tr id="1el"><td><a href="../image/big/1el.jpg" target=_blank><img src="../image/h200/1el.jpg" alt="Christ Mocked and Crowned with Thorns" title="Christ Mocked and Crowned with Thorns"></a></td><td valign=top><b>Christ Mocked and Crowned with Thorns</b>
+<br>1550-55
 <p>
 <p><a href="c_10.html">Passion of the Christ</a>
-</td></tr><tr id="1au"><td><a href="../image/big/1au.jpg" target=_blank><img src="../image/h200/1au.jpg" alt="Triptych of the Entombment" title="Triptych of the Entombment"></a></td><td valign=top><b>Triptych of the Entombment</b>
-<br>1559-60
-<p>
-<p><a href="c_17.html">Lamentation over Christ</a>
 </td></tr><tr id="1av"><td><a href="../image/big/1av.jpg" target=_blank><img src="../image/h200/1av.jpg" alt="prophets Isaiah and Jeremiah" title="prophets Isaiah and Jeremiah"></a></td><td valign=top><b>prophets Isaiah and Jeremiah</b>
 <br>1559-60
 <p>
 <p><a href="c_12.html">Prophets</a>
+</td></tr><tr id="1au"><td><a href="../image/big/1au.jpg" target=_blank><img src="../image/h200/1au.jpg" alt="Triptych of the Entombment" title="Triptych of the Entombment"></a></td><td valign=top><b>Triptych of the Entombment</b>
+<br>1559-60
+<p>
+<p><a href="c_17.html">Lamentation over Christ</a>
+</td></tr><tr id="1at"><td><a href="../image/big/1at.jpg" target=_blank><img src="../image/h200/1at.jpg" alt="Ecce Homo Triptych" title="Ecce Homo Triptych"></a></td><td valign=top><b>Ecce Homo Triptych</b>
+<br>1559-60
+<p>
+<p><a href="c_10.html">Passion of the Christ</a>
+</td></tr><tr id="1eq"><td><a href="../image/big/1eq.jpg" target=_blank><img src="../image/h200/1eq.jpg" alt="Judith Showing the Head of Holofernes" title="Judith Showing the Head of Holofernes"></a></td><td valign=top><b>Judith Showing the Head of Holofernes</b>
+<br>1564
+<p>
+<p><a href="c_1k.html">Judith</a>
 </td></tr><tr id="1aw"><td><a href="../image/big/1aw.jpg" target=_blank><img src="../image/h200/1aw.jpg" alt="Lamentation on the Dead Christ" title="Lamentation on the Dead Christ"></a></td><td valign=top><b>Lamentation on the Dead Christ</b>
 <br>1566
 <p>
 <p><a href="c_17.html">Lamentation over Christ</a>
+</td></tr><tr id="1ep"><td><a href="../image/big/1ep.jpg" target=_blank><img src="../image/h200/1ep.jpg" alt="Joseph and Potiphar's Wife" title="Joseph and Potiphar's Wife"></a></td><td valign=top><b>Joseph and Potiphar's Wife</b>
+<br>1566
+<p>
+<p><a href="c_0l.html">Scenes from the Old Testament</a>
 </td></tr><tr id="1ay"><td><a href="../image/big/1ay.jpg" target=_blank><img src="../image/h200/1ay.jpg" alt="Triptych" title="Triptych"></a></td><td valign=top><b>Triptych</b>
 <br>
 <p>
